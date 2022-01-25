@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --primary-color: #0e2431;
+    --secondary-color: #6a59d1;
+    --tertiary-color: #777;
+
+    --btn-color: #fff;
+
+    --hover-color: #614fd0;
+
+    --body-bg-color: #fefefe;
+    --card-bg-color: #fff;
+    --modal-bg-color: #fff;
+    --bg-transparent-color: rgba(0, 0, 0, .1);
+    --primary-transparent-color: rgba(0, 0, 0, .1);
+    --secondary-transparent-color: rgba(106, 89, 209, .1);
+    --line-color: #d7d7d7;
+
+    --color-filter: invert(1);
+    /* ? */
+
+    --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    /* ? */
+
+    --small-font-size: .9em;
+    --normal-font-size: 1em;
+
+    --scroll-bar-color: #c5cadf;
+    --scroll-thumb-color: #70768a;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: var(--primary-color);
+    background: var(--body-bg-color);
+    margin: 2rem 0 0 0;
+    /* margin? */
+    transition: all .5s ease;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.red {
+    border: 1px solid red;
+}
+.blue {
+    border: 1px solid blue;
+}
+.green {
+    border: 1px solid green;
+}
+
+/* Header starts */
+
+header {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    /* ? */
+    transition: all .6s ease;
+}
+.nav-bar {
+    position: relative;
+    /* position? */
+    height: calc(4rem + 1rem);
+    /* height? */
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+    margin: 0 auto;
+    transition: all .6s ease;
+}
+.nav-bar .logo {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.nav-items a {
+    color: var(--primary-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+.nav-items a:not(:last-child) {
+    margin-right: 3.125rem;
+}
+.nav-items a:hover {
+    color: var(--secondary-color);
+}
+
+/* Header ends */
+
+/* Home starts */
+
+.home {
+    position: relative;
+    /* ? */
+    max-width: 1250px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+}
+.home .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.home-container .media-icons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2.5rem;
+}
+.home-container .media-icons a {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin: .625rem 0;
+}
+.home-container .media-icons a:hover {
+    color: var(--hover-color);
+}
+.home-container .info h2 {
+    font-size: 4em;
+    font-weight: 600;
+    line-height: 4.375rem;
+}
+.home-container .info h3 {
+    color: var(--tertiary-color);
+    /* font-feature-settings: 1.3em; ?????*/
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 3.125rem;
+}
+.home-container .info p {
+    color: var(--tertiary-color);
+    font-size: var(--normal-font-size);
+    max-width: 21.875rem;
+}
+.btn {
+    background: var(--secondary-color);
+    color: var(--btn-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 1.5625rem;
+    padding: 1.25rem 1.875rem;
+    letter-spacing: .0625rem;
+    border-radius: .625rem;
+}
+.btn:hover {
+    background: var(--hover-color);
+}
+.home-container .home-img {
+    position: relative;
+    /* ? */
+}
+.home-container .home-img img {
+    width: 90%;
+    transform: translate(0, 0);
+    /* border-radius: 50%; */
+}
+.home .scroll-down {
+    color: var(--primary-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    margin-top: 1.25rem;
+}
+.home .scroll-down i {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    animation: arrow-down ease 2s infinite;
+}
+@keyframes arrow-down {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(10px);
+    }
+    /* ? */
+}
+
+/* Home ends */
+
+/* About starts */
+
+
+/* About ends */
