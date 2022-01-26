@@ -19,7 +19,7 @@
     --color-filter: invert(1);
     /* ? */
 
-    --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    --box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
     /* ? */
 
     --small-font-size: .9em;
@@ -67,6 +67,16 @@ li {
     border: 1px solid green;
 }
 
+/* Qeydler:
+   
+   1.calc- CSS-de 4 riyazi emeli heyata kecirmek ucun mutleq istifade etmeli oldugun funksiyadir.
+           Background-image deki url ya da content-deki attr kimi bir css funksiyasidir calc.
+   2.em- bu unit hansi elemente verilibse,o elementi ehate eden ana elementin olcusune esasen teyin edilir.
+         Ana elementde olcu yoxdursa onu ehate eden ana elementin olcusunu esas goturur.Bu html elementine qeder gede biler.
+   3.filter:invert()- Seklin rengini tam tersine cevirir yeni agi qaraya,qarani aga cevirir.
+
+*/
+
 /* Header starts */
 
 header {
@@ -108,6 +118,9 @@ header {
 .nav-items a:hover {
     color: var(--secondary-color);
 }
+.nav-menu-btn {
+    display: none;
+}
 
 /* Header ends */
 
@@ -144,14 +157,14 @@ header {
 .home-container .info h2 {
     font-size: 4em;
     font-weight: 600;
-    line-height: 4.375rem;
+    line-height: 5rem;
 }
 .home-container .info h3 {
     color: var(--tertiary-color);
     /* font-feature-settings: 1.3em; ?????*/
     font-size: 1.3em;
     font-weight: 600;
-    line-height: 3.125rem;
+    line-height: 3rem;
 }
 .home-container .info p {
     color: var(--tertiary-color);
@@ -179,6 +192,7 @@ header {
 .home-container .home-img img {
     width: 90%;
     transform: translate(0, 0);
+    /* width and transform ? */
     /* border-radius: 50%; */
 }
 .home .scroll-down {
@@ -208,3 +222,78 @@ header {
 
 
 /* About ends */
+
+
+
+
+/* Breakpoints */
+
+@media (max-width: 1070px) {
+
+    /* Header starts */
+
+    .navigation {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--primary-transparent-color);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    .navigation.active {
+        visibility: visible;
+        opacity: 1;
+        /* ? kliklemeden ortaya cixma problemi */
+    }
+    .nav-items {
+        position: relative;
+        background: var(--modal-bg-color);
+        width: 600px;
+        max-width: 600px;
+        /*?Muellimdensorusmaq*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        /*?*/
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        transform: translateY(-50px);
+        transition: .3s ease;
+    }
+    .navigation.active .nav-items {
+        transform: translateY(0);
+    }
+    .nav-items a {
+        margin: 15px 50px;
+    }
+    .nav-close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url('../img/closeBTN.png') no-repeat center;
+        background-size: 12px;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        cursor: pointer;
+    } 
+    .nav-menu-btn {
+        background: url('../img/menuBTN.png') no-repeat center;
+        background-size: 30px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: block;
+    }
+    
+    /* Header ends */
+
+}
