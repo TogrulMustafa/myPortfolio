@@ -57,6 +57,50 @@ li {
     align-items: center;
     justify-content: center;
 }
+.section {
+    position: relative;
+    /* ? */
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+}
+.sub-section {
+    position: relative;
+    /* ? */
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+/* ? */
+
+
+.section-title-01 {
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(to top, transparent 0%, var(--primary-color) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .1;
+}
+.section-title-02 {
+    font-size: 2.5em;
+    font-weight: 700;
+    transform: translateY(-80px);
+}
+.section-title-02:before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    background: var(--secondary-color);
+}
+.container {
+    position: relative;
+    flex-direction: column;
+}
 .red {
     border: 1px solid red;
 }
@@ -74,6 +118,8 @@ li {
    2.em- bu unit hansi elemente verilibse,o elementi ehate eden ana elementin olcusune esasen teyin edilir.
          Ana elementde olcu yoxdursa onu ehate eden ana elementin olcusunu esas goturur.Bu html elementine qeder gede biler.
    3.filter:invert()- Seklin rengini tam tersine cevirir yeni agi qaraya,qarani aga cevirir.
+   4.position:relative- bezi yerlere bu propertinin verilme sebebi mence sehifede gezende aniden ortaya cixmasi ucun animeJS-de lazim olacaq.
+   5.
 
 */
 
@@ -192,8 +238,8 @@ header {
 .home-container .home-img img {
     width: 90%;
     transform: translate(0, 0);
-    /* width and transform ? */
-    /* border-radius: 50%; */
+    /*width and transform?*/
+    border-radius: 10px;
 }
 .home .scroll-down {
     color: var(--primary-color);
@@ -220,6 +266,61 @@ header {
 
 /* About starts */
 
+.about .container .content {
+    width: 100%;
+    column-gap: 40px;
+}
+.about-img {
+    position: relative;
+    /* ? */
+}
+.about-img img {
+    max-width: 100%;
+    min-width: 500px;
+    border-radius: 10px;
+}
+.about-info .description {
+    max-width: 600px;
+}
+.about-info .description h3 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-info .description h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-info .description h4 span {
+    color: var(--secondary-color);
+}
+.about-info .description p {
+    color: var(--tertiary-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--line-color);
+}
+.about-info .professional-list {
+    display: flex;
+    column-gap: 30px;
+}
+.about-info .professional-list .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    margin-bottom: 20px;
+}
+.about-info .professional-list .list-item h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.about-info .professional-list .list-item span {
+    color: var(--tertiary-color);
+    font-size: var(--small-font-size);
+}
 
 /* About ends */
 
@@ -296,4 +397,81 @@ header {
     
     /* Header ends */
 
+    /* Home starts */
+
+    .home .home-container .info {
+        font-size: .85rem;
+    }
+    
+    /* Home ends */
+
+    /* About starts */
+
+    .about .container .content {
+        display: grid;
+        width: 100%;
+        row-gap: 20px;
+    }
+    .about-img img {
+        min-width: 0;
+        width: 100%;
+    }
+    .about-info {
+        min-width: 0;
+        width: 100%;
+    }
+    .about-info .professional-list {
+        flex-direction: column;
+    }
+    .about-info .professional-list .list-item {
+        justify-content: flex-start;
+    }
+
+    /* About ends */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 730px) {
+
+    body {
+        margin: 5rem 0 0 0;
+    }
+    .section-title-01 {
+        font-size: 3em;
+    }
+    .section-title-02 {
+        font-size: 2em;
+        transform: translateY(-65px);
+    }
+
+    /* Home starts */
+
+    .home .home-container {
+        display: grid;
+    }
+    .home-container .home-img {
+        position: absolute;
+    }
+    .home-container .home-img img {
+        width: 60%;
+        transform: translate(80px,-180px);
+    }
+    .home .home-container .info {
+        font-size: .8rem;
+    }
+    .media-icons {
+        margin-bottom: 80px;
+    }
+    
+    /* Home ends */
 }
