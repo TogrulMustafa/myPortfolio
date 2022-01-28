@@ -1,6 +1,11 @@
 
 // Header starts
 
+window.addEventListener('scroll', _ => {
+    const header = document.querySelector('header')
+    header.classList.toggle('sticky', window.scrollY > 0)
+})
+
 const menuBTN = document.querySelector('.nav-menu-btn')
 const closeBTN = document.querySelector('.nav-close-btn')
 const navigation = document.querySelector('.navigation')
@@ -20,8 +25,5 @@ navItems.forEach((navItem) => {
         navigation.classList.remove('active')
     })
 })
-
-
-
 
 // Header ends

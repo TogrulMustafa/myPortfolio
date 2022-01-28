@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --primary-color: #0e2431;
     --secondary-color: #6a59d1;
@@ -8,6 +7,7 @@
 
     --hover-color: #614fd0;
 
+    --header-bg-color: rgba(255, 255, 255, .1);
     --body-bg-color: #fefefe;
     --card-bg-color: #fff;
     --modal-bg-color: #fff;
@@ -17,10 +17,8 @@
     --line-color: #d7d7d7;
 
     --color-filter: invert(1);
-    /* ? */
 
     --box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
-    /* ? */
 
     --small-font-size: .9em;
     --normal-font-size: 1em;
@@ -43,8 +41,8 @@ body {
     color: var(--primary-color);
     background: var(--body-bg-color);
     margin: 2rem 0 0 0;
-    /* margin? */
-    transition: all .5s ease;
+    transition: .5s ease;
+    /*margin and transition?*/
 }
 a {
     text-decoration: none;
@@ -63,6 +61,7 @@ li {
     max-width: 1150px;
     margin: 0 auto;
     padding: 6rem 2rem 2rem;
+    /* ? */
 }
 .sub-section {
     position: relative;
@@ -81,6 +80,7 @@ li {
     background: linear-gradient(to top, transparent 0%, var(--primary-color) 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* text-fill-color? */
     opacity: .1;
 }
 .section-title-02 {
@@ -99,6 +99,7 @@ li {
 }
 .container {
     position: relative;
+    /* ? */
     flex-direction: column;
 }
 .red {
@@ -119,7 +120,8 @@ li {
          Ana elementde olcu yoxdursa onu ehate eden ana elementin olcusunu esas goturur.Bu html elementine qeder gede biler.
    3.filter:invert()- Seklin rengini tam tersine cevirir yeni agi qaraya,qarani aga cevirir.
    4.position:relative- bezi yerlere bu propertinin verilme sebebi mence sehifede gezende aniden ortaya cixmasi ucun animeJS-de lazim olacaq.
-   5.
+   5.background-clip- arxa fonun serhedlerini teyin etmek ucun istifade olunur.
+   6.
 
 */
 
@@ -132,8 +134,11 @@ header {
     left: 0;
     width: 100%;
     backdrop-filter: blur(20px);
-    /* ? */
-    transition: all .6s ease;
+    transition: .6s ease;
+}
+header.sticky {
+    background: var(--header-bg-color);
+    box-shadow: var(--box-shadow);
 }
 .nav-bar {
     position: relative;
@@ -146,7 +151,10 @@ header {
     align-items: center;
     padding: 0 1.25rem;
     margin: 0 auto;
-    transition: all .6s ease;
+    transition: .6s ease;
+}
+header.sticky .nav-bar {
+    height: calc(2.5rem + 1rem);
 }
 .nav-bar .logo {
     color: var(--primary-color);
@@ -324,6 +332,147 @@ header {
 
 /* About ends */
 
+/* Skills start */
+
+.skills .container .content {
+    width: 100%;
+}
+.skills-description {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+.skills-description h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+.skills-info {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+}
+.skills-info h4{
+    margin-bottom: 20px;
+}
+.skills-info h4 label{
+    background: var(--secondary-color);
+    color: var(--btn-color);
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.education-all {
+    margin-bottom: 80px;
+}
+.edu-list .item {
+    background: var(--card-bg-color);
+    box-shadow: var(--box-shadow);
+    border-bottom: 3px solid var(--secondary-color);
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 6px;
+    transition: .3s ease;
+}
+.edu-list .item .year {
+    font-size: var(--small-font-size);
+    margin-bottom: 5px;
+}
+.edu-list .item p {
+    color: var(--tertiary-color);
+    font-size: var(--small-font-size);
+}
+.edu-list .item p span{
+    color: var(--primary-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+.bar {
+    background: var(--card-bg-color);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 6px;
+    transition: .3s ease;
+}
+.bar .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: var(--small-font-size);
+}
+.bar .info span {
+    font-weight: 500;
+}
+.bar .line {
+    position: relative;
+    width: 100%;
+    height: 7px;
+    background: var(--scroll-bar-color);
+    border-radius: 2px;
+}
+.bar .line:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+.bar .html::before {
+    width: 95%;
+}
+.bar .css::before {
+    width: 65%;
+}
+.bar .javascript::before {
+    width: 60%;
+}
+.bar .react::before {
+    width: 50%;
+}
+.bar .jquery::before {
+    width: 35%;
+}
+.experience-card {
+    background: var(--card-bg-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding: 35px;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+    transition: .3s ease;
+}
+.experience-card .upper {
+    line-height: 30px;
+}
+.experience-card h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.experience-card h5 {
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    font-style: italic;
+}
+.experience-card span {
+    color: var(--tertiary-color);
+}
+.experience-card .hr {
+    width: 100%;
+    height: 2px;
+    background: var(--line-color);
+    margin: 10px 0 22px;
+}
+.edu-list .item:hover, .bar:hover, .experience-card:hover {
+    transform: scale(1.03);
+}
+
+
+/* Skills end */
+
 
 
 
@@ -345,7 +494,7 @@ header {
         background: var(--primary-transparent-color);
         visibility: hidden;
         opacity: 0;
-        transition: all .3s ease;
+        transition: .3s ease;
     }
     .navigation.active {
         visibility: visible;
@@ -357,12 +506,10 @@ header {
         background: var(--modal-bg-color);
         width: 600px;
         max-width: 600px;
-        /*?Muellimdensorusmaq*/
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 20px;
-        /*?*/
         padding: 40px;
         border-radius: 10px;
         box-shadow: var(--box-shadow);
@@ -445,6 +592,7 @@ header {
 
     body {
         margin: 5rem 0 0 0;
+        /* ? */
     }
     .section-title-01 {
         font-size: 3em;
