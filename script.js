@@ -27,3 +27,27 @@ navItems.forEach((navItem) => {
 })
 
 // Header ends
+
+// Services start
+
+const serviceModals = document.querySelectorAll('.service-modal')
+const learnmoreBtns = document.querySelectorAll('.learn-more-btn')
+const modalCloseBtns = document.querySelectorAll('.modal-close-btn')
+
+let modal = (modalClick) => {
+    serviceModals[modalClick].classList.add('active')
+}
+learnmoreBtns.forEach((learnmoreBtn, i) => {
+    learnmoreBtn.addEventListener('click', _ => {
+        modal(i)
+    })
+})
+modalCloseBtns.forEach((modalCloseBtn) => {
+    modalCloseBtn.addEventListener('click', _ => {
+        serviceModals.forEach((modalView) => {
+            modalView.classList.remove('active')
+        })
+    })
+})
+
+// Services end
