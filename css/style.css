@@ -2,10 +2,12 @@
     --primary-color: #0e2431;
     --secondary-color: #6a59d1;
     --tertiary-color: #777;
+    --card-color: #fff;
 
     --btn-color: #fff;
 
     --hover-color: #614fd0;
+    --hover-bg-color: rgba(0, 0, 0, .5);
 
     --header-bg-color: rgba(255, 255, 255, .1);
     --body-bg-color: #fefefe;
@@ -61,7 +63,7 @@ li {
     max-width: 1150px;
     margin: 0 auto;
     padding: 6rem 2rem 2rem;
-    /* ? */
+    /* ?Ferqli ekran olculerinde paddingin olcusunu deyismek daha meslehetlidir.Bu meslehete riayet et. */
 }
 .sub-section {
     position: relative;
@@ -516,6 +518,7 @@ header.sticky .nav-bar {
     color: var(--tertiary-color);
     cursor: pointer;
     transition: .3s ease;
+    /* ? */
 }
 .service-card .learn-more-btn i {
     transition: .3s ease;
@@ -581,6 +584,108 @@ header.sticky .nav-bar {
 
 /* Portfolio starts */
 
+.portfolio .container .content {
+    width: 100%;
+}
+.portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+    max-width: 100%;
+    margin: 0 auto;
+    /*max-width ve margin?*/;
+}
+.portfolio-list .img-card {
+    position: relative;
+    max-width: 100%;
+    /* ? */
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    cursor: pointer;
+}
+.portfolio-list .img-card .overlay {
+    transition: 1s ease;
+}
+.portfolio-list .img-card:hover .overlay {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background: var(--hover-bg-color);
+}
+.portfolio-list .img-card .info {
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    bottom: 0px;
+    color: var(--card-color);
+    opacity: 0;
+    transition: .5s ease;
+}
+.portfolio-list .img-card:hover .info {
+    transform: translate(20px,-20px);
+    opacity: 1;
+}
+.portfolio-list .img-card .info h3 {
+    font-size: 1.5em;
+}
+.portfolio-list .img-card .info span {
+    font-size: 1.2em;
+}
+.portfolio-list .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio-model {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: var(--primary-transparent-color);
+    backdrop-filter: blur(20px);
+    /*filterle deyistirmeyi yoxla?*/
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease;
+}
+.portfolio-model.active {
+    visibility: visible;
+    opacity: 1;
+}
+.portfolio-model-body {
+    position: relative;
+    background: var(--modal-bg-color);
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transform: translateY(-50px);
+    transition: .5s ease;
+}
+.portfolio-model.active .portfolio-model-body {
+    transform: translateY(0);
+}
+.portfolio-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+.portfolio-model-body h3 {
+    font-size: 1.5em;
+}
+.portfolio-model-body img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
 
 /* Portfolio ends */
 

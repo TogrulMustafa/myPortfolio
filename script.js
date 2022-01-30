@@ -42,12 +42,51 @@ learnmoreBtns.forEach((learnmoreBtn, i) => {
         modal(i)
     })
 })
-modalCloseBtns.forEach((modalCloseBtn) => {
+
+
+
+let tog = (togClick) => {
+    serviceModals[togClick].classList.remove('active')
+}
+modalCloseBtns.forEach((modalCloseBtn, i) => {
     modalCloseBtn.addEventListener('click', _ => {
-        serviceModals.forEach((modalView) => {
-            modalView.classList.remove('active')
+        tog(i)
+    })
+})
+
+
+let nah = (nahClick) => {
+    serviceModals[nahClick].classList.remove('active')
+}
+serviceModals.forEach((serviceModal, i) => {
+    serviceModal.addEventListener('click', _ => {
+        nah(i)
+    })
+})
+
+
+// Services end
+
+// Portfolio starts
+
+const portfolioModals = document.querySelectorAll('.portfolio-model')
+const imgCards = document.querySelectorAll('.img-card')
+const portfolioCloseBtns = document.querySelectorAll('.portfolio-close-btn')
+
+let portfolioModal = (modalClick) => {
+    portfolioModals[modalClick].classList.add('active')
+}
+imgCards.forEach((imgCard, i) => {
+    imgCard.addEventListener('click', _ => {
+        portfolioModal(i)
+    })
+})
+portfolioCloseBtns.forEach((portfolioCloseBtn) => {
+    portfolioCloseBtn.addEventListener('click', _ => {
+        portfolioModals.forEach((portfolioModalView) => {
+            portfolioModalView.classList.remove('active')
         })
     })
 })
 
-// Services end
+// Portfolio ends
