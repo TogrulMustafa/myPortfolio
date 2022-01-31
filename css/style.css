@@ -131,7 +131,7 @@ li {
 
 header {
     position: fixed;
-    z-index: 9;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
@@ -690,6 +690,255 @@ header.sticky .nav-bar {
 /* Portfolio ends */
 
 
+/* Get-In-Touch starts */
+
+.get-in-touch {
+    margin-top: 70px;
+}
+.get-in-touch .container .content {
+    width: 100%;
+}
+.get-in-touch .contact-card {
+    position: relative;
+    width: 90%;
+    background: var(--card-bg-color);
+    box-shadow: var(--box-shadow);
+    padding: 50px;
+    border-radius: 10px;
+    column-gap: 50px;
+}
+.contact-card .title {
+    text-transform: uppercase;
+    line-height: 60px;
+}
+.contact-card .title h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 20px;
+}
+.contact-card .title h3 {
+    font-size: 2.3em;
+    font-weight: 400;
+}
+.contact-card .title h2 {
+    font-size: 4.2em;
+    font-weight: 700;
+    background: linear-gradient(to top, transparent 0%, var(--primary-color) 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .9;
+}
+
+/* Get-In-Touch ends */
+
+/* Clients start */
+
+.our-client .container {
+    flex-direction: column;
+}
+.our-client .container .content {
+    width: 100%;
+}
+.client-swiper .swiper-wrapper {
+    margin-bottom: 30px;
+}
+.client-swiper .swiper-slide {
+    gap: 50px;
+    margin: 20px 0;
+}
+.client-img {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.client-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.client-details {
+    max-width: 500px;
+}
+.client-details p {
+    font-size: 1.2em;
+    color: var(--tertiary-color);
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--line-color);
+}
+.client-details h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+.client-details span {
+    font-size: 1.1em;
+    color: var(--tertiary-color);
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: ' ';
+}
+.swiper-button-next, .swiper-button-prev {
+    color: var(--secondary-color);
+    font-size: 3em;
+}
+.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+    background: var(--secondary-color);
+}
+
+/* Clients end */
+
+
+/* Contact starts */
+
+.contact .container .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact-left h2 {
+    font-size: 2.1em;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+.contact-list li {
+    margin-bottom: 40px;
+}
+.contact-list li h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact-list li h3 i {
+    color: var(--second-color);
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+.contact-list li span {
+    color: var(--tertiary-color);
+    margin-left: 40px;
+}
+.contact-list li span a {
+    color: var(--tertiary-color);
+}
+.contact-right p {
+    color: var(--tertiary-color);
+    font-size: 1.6em;
+    margin-bottom: 30px;
+}
+.contact-right p span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.contact-form input, .contact-form textarea {
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    background: var(--secondary-transparent-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.contact-form textarea {
+    width: 100%;
+    resize: none;
+}
+::placeholder {
+    color: var(--primary-color);
+}
+.contact-form .first-row input {
+    width: 100%;
+}
+.contact-form .second-row {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-form .second-row input {
+    width: 48%;
+}
+.contact-form .btn {
+    border: none;
+    margin-top: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Contact ends */
+
+
+/* Footer starts */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+    width: 100%;
+    margin-top: 50px;
+    padding: 3rem 2rem;
+    color: var(--card-color);
+}
+footer a {
+    color: var(--card-color);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1150px;
+    /* Yuxaridaki ikisi daha once yazdigim width ve max-width:600px ile oxsarligi var.Yoxla.?*/
+}
+.footer-container .about h2 {
+    font-size: 3em;
+    font-weight: 600;
+    background: linear-gradient(to top, transparent 0%, var(--modal-bg-color) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .8;
+}
+.footer-container .about p {
+    font-size: var(--normal-font-size);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.footer-container .info,
+.footer-container .follow
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-container .info h3,
+.footer-container .follow h3
+{
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.footer-container .info ul,
+.footer-container .follow ul
+{
+    display: flex;
+}
+.footer-container .info a {
+    margin: 20px;
+}
+.footer-container .follow a {
+    font-size: 1.5em;
+    margin: 20px;
+}
+.footer-copyright .group p {
+    font-size: var(--normal-font-size);
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+
+/* Footer ends */
+
+
 
 
 /* Breakpoints */
@@ -792,16 +1041,86 @@ header.sticky .nav-bar {
 
     /* About ends */
 
+    /* Get-In-Touch starts */
+
+    .get-in-touch .contact-card {
+        display: grid;
+        width: 100%;
+    }
+    .contact-card .title {
+        font-size: .8rem;
+        line-height: 50px;
+    }
+
+    /* Get-In-Touch ends */
+
+    /* Clients start */
+
+
+    .client-swiper .swiper-slide {
+        flex-direction: column;
+    }
+    .client-details {
+        text-align: center;
+    }
+
+
+    /* Clients end */
+
+
+    /* Contact starts */
+
+
+    .contact .content {
+        flex-direction: column;
+        font-size: .9rem;
+    }
+    .contact .contact-left {
+        margin-bottom: 40px;
+    }
+    .contact-form .second-row {
+        flex-direction: column;
+    }
+    .contact-form .second-row input {
+        width: 100%;
+    }
+    
+    
+    /* Contact ends */
+
+    /* Footer starts */
+
+    footer .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container .about,
+    .footer-container .info 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .footer-container .info ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-container .info ul li {
+        margin: 5px 0;
+    }
+    .footer-container .hr {
+        width: 100%;
+        height: 2px;
+        margin: 10px 0 22px;
+        background: var(--header-bg-color);
+    }
+
+    /* Footer ends */
+
 }
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 730px) {
@@ -838,4 +1157,20 @@ header.sticky .nav-bar {
     }
     
     /* Home ends */
+
+    /* Get-In-Touch starts */
+
+    .get-in-touch .contact-card {
+        display: grid;
+    }
+    .contact-card .title {
+        font-size: .6rem;
+        line-height: 40px;
+    }
+    .contact-card .contact-btn .btn {
+        font-size: .8rem;
+    }
+    
+
+    /* Get-In-Touch ends */
 }
