@@ -43,8 +43,8 @@ body {
     color: var(--primary-color);
     background: var(--body-bg-color);
     margin: 2rem 0 0 0;
-    transition: .5s ease;
-    /*margin and transition?*/
+    /* transition: .5s ease; */
+    /*transition- ona gore qoyuruq ki, ag/qara temasinda kecid muddetini teyin etmek ucun.*/
 }
 a {
     text-decoration: none;
@@ -72,9 +72,6 @@ li {
     margin: 0 auto;
     padding: 6rem 0;
 }
-/* ? */
-
-
 .section-title-01 {
     font-size: 4.5em;
     font-weight: 800;
@@ -145,6 +142,10 @@ li {
 .scrollToTop-btn.active {
     opacity: 1;
     bottom: 20px;
+}
+.scrollToTop-btn.passive {
+    background: var(--card-color) !important;
+    color: var(--secondary-color) !important;
 }
 
 
@@ -241,7 +242,6 @@ header.sticky .nav-bar {
 }
 .home-container .info h3 {
     color: var(--tertiary-color);
-    /* font-feature-settings: 1.3em; ?????*/
     font-size: 1.3em;
     font-weight: 600;
     line-height: 3rem;
@@ -272,7 +272,6 @@ header.sticky .nav-bar {
 .home-container .home-img img {
     width: 90%;
     transform: translate(0, 0);
-    /*width and transform?*/
     border-radius: 10px;
 }
 .home .scroll-down {
@@ -293,7 +292,6 @@ header.sticky .nav-bar {
     30% {
         transform: translateY(10px);
     }
-    /* ? */
 }
 
 /* Home ends */
@@ -1198,3 +1196,40 @@ footer a {
 
     /* Get-In-Touch ends */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* header {
+    border: 2px solid red;
+} */
+/* section {
+    border: 5px solid green;
+} */
+/* footer {
+    border: 10px solid blue;
+} */
+/* .toptobtn {
+    position: fixed;
+    z-index: 30;
+    right: 10px;
+    top: 10px;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: crimson;
+    color: #fff;
+    padding: 10px;
+} */
