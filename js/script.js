@@ -130,6 +130,7 @@ window.addEventListener('scroll', _ => {
     scrollTopBtn.classList.toggle('active', window.scrollY > 500)
     scrollTopBtn.classList.toggle('passive', window.scrollY > 6345)
     // ?6345
+    // Sehv yazmisam telefon ekranlarinda ise yaramir 
 })
 
 scrollTopBtn.addEventListener('click', _ => {
@@ -145,6 +146,7 @@ scrollDownBtn.addEventListener('click', _ => {
     document.body.scrollTo(homeHeight, bodyHeight)
     document.documentElement.scrollTo(homeHeight, bodyHeight)
     // ?Basqa cur nece ede bilerem saytin en sonuna getmek ucun?
+    // Burda da yene telefon ekranlarinda islemir
 })
 
 
@@ -186,7 +188,7 @@ window.addEventListener('scroll', _ => {
 
 ScrollReveal({ 
     reset: true,
-    distance: '60px',
+    distance: '30px',
     duration: 2500,
     delay: 100
 });

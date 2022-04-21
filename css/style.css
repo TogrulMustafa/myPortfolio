@@ -1,12 +1,12 @@
 :root {
     --primary-color: #0e2431;
-    --secondary-color: #6a59d1;
+    --secondary-color: rgb(20, 123, 220);
     --tertiary-color: #777;
     --card-color: #fff;
 
     --btn-color: #fff;
 
-    --hover-color: #614fd0;
+    --hover-color: rgb(0, 94, 181);
     --hover-bg-color: rgba(0, 0, 0, .5);
 
     --header-bg-color: rgba(255, 255, 255, .1);
@@ -25,9 +25,7 @@
     --small-font-size: .9em;
     --normal-font-size: 1em;
 
-    --scroll-bar-color: #c5cadf;
-    --scroll-thumb-color: #70768a;
-    --scroll-thumb-hover-color: #454f6b;
+    --bar-color: #c5cadf;
 }
 
 * {
@@ -120,7 +118,9 @@ li {
    3.filter:invert()- Seklin rengini tam tersine cevirir yeni agi qaraya,qarani aga cevirir.
    4.position:relative- bezi yerlere bu propertinin verilme sebebi mence sehifede gezende aniden ortaya cixmasi ucun animeJS-de lazim olacaq.
    5.background-clip- arxa fonun serhedlerini teyin etmek ucun istifade olunur.
-   6.
+   6.box-sizing: border-box- bir elemente bu deyer verilibse,hemin elemente verilen genislik ve hundurluk o elemente verilen padding ve border propertisinden asili olmayaraq sabit qalir.
+     Lakin content-box deyerinde ise eksine elementin genislik ve hundurluyu hemin elemente verilen padding ve border deyerinden asili olaraq deyisir.
+   7.
 
 */
 
@@ -131,7 +131,7 @@ li {
     bottom: 0;
     width: 45px;
     height: 45px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: var(--btn-color);
     border-radius: 3px;
     cursor: pointer;
@@ -182,7 +182,8 @@ header.sticky .nav-bar {
 }
 .nav-bar .logo {
     color: var(--primary-color);
-    font-size: 1.3em;
+    font-family: 'Beau Rivage', cursive;
+    font-size: 2.3em;
     font-weight: 600;
 }
 .nav-items a {
@@ -437,7 +438,7 @@ header.sticky .nav-bar {
     position: relative;
     width: 100%;
     height: 7px;
-    background: var(--scroll-bar-color);
+    background: var(--bar-color);
     border-radius: 2px;
 }
 .bar .line:before {
@@ -913,12 +914,14 @@ footer a {
     /* Yuxaridaki ikisi daha once yazdigim width ve max-width:600px ile oxsarligi var.Yoxla.?*/
 }
 .footer-container .about h2 {
+    font-family: 'Beau Rivage', cursive;
     font-size: 3em;
     font-weight: 600;
     background: linear-gradient(to top, transparent 0%, var(--modal-bg-color) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: .8;
+    padding: 0 1.25rem;
 }
 .footer-container .about p {
     font-size: var(--normal-font-size);
